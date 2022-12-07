@@ -49,7 +49,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Define zplug plugins
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 zplug 'romkatv/powerlevel10k', as:theme, depth:1
-zplug 'zdharma/fast-syntax-highlighting'
+zplug 'rupa/z', as:plugin, use:'z.sh', depth:1
+zplug 'zdharma/fast-syntax-highlighting', as:plugin, depth:1
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
