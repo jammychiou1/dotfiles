@@ -52,6 +52,11 @@ zplug 'romkatv/powerlevel10k', as:theme, depth:1
 zplug 'rupa/z', as:plugin, use:'z.sh', depth:1
 zplug 'zdharma/fast-syntax-highlighting', as:plugin, depth:1
 zplug 'zsh-users/zsh-autosuggestions', as:plugin, depth:1
+zplug "plugins/web-search", from:oh-my-zsh
+zplug "plugins/copyfile", from:oh-my-zsh
+zplug "plugins/copybuffer", from:oh-my-zsh
+zplug "plugins/dirhistory", from:oh-my-zsh
+zplug "plugins/history", from:oh-my-zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
