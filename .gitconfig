@@ -1,3 +1,9 @@
 [user]
 	email = jammy.chiou1@gmail.com
 	name = jammychiou1
+[init]
+	defaultBranch = main
+[core]
+	editor = nvim
+[diff]
+	tool = nvimdiff
