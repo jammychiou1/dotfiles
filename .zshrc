@@ -92,6 +92,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# use kitty's ssh integration
+# remember to install kitty
+alias s='kitty +kitten ssh'
+
 bindkey '\e[H' beginning-of-line
 bindkey '\e[F' end-of-line
 bindkey '\e[3~' delete-char
