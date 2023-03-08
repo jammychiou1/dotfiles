@@ -72,6 +72,9 @@ zplug load
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# Disable p10k when TERM is linux (tty / text mode)
+[[ $TERM = "linux" ]] && powerlevel10k_plugin_unload
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -92,9 +95,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# use kitty's ssh integration
-# remember to install kitty
-alias s='kitty +kitten ssh'
+eval $(thefuck --alias)
 
 bindkey '\e[H' beginning-of-line
 bindkey '\e[F' end-of-line
