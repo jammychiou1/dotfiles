@@ -93,6 +93,10 @@ alias l='ls -CF'
 
 eval $(thefuck --alias)
 
+function xo {
+    xdg-open $@ > /dev/null 2>&1
+}
+
 bindkey '\e[H' beginning-of-line
 bindkey '\e[F' end-of-line
 bindkey '\e[3~' delete-char
@@ -102,3 +106,13 @@ bindkey '\e[1;5D' backward-word
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
+
+# User specific aliases and functions
+if [ -d ~/.zshrc.d ]; then
+	for rc in ~/.zshrc.d/*; do
+		if [ -f "$rc" ]; then
+			source "$rc"
+		fi
+	done
+fi
+

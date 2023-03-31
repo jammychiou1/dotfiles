@@ -1,4 +1,6 @@
 local wezterm = require 'wezterm'
+local act = wezterm.action
+
 return {
     font = wezterm.font 'VictorMono Nerd Font',
     font_size = 9.0,
@@ -10,6 +12,10 @@ return {
         right = '0.5cell',
         top = '0cell',
         bottom = '0cell',
+    },
+    keys = {
+        { key = 'UpArrow', mods = 'SHIFT', action = act.ScrollToPrompt(-1) },
+        { key = 'DownArrow', mods = 'SHIFT', action = act.ScrollToPrompt(1) },
     },
     -- ssh_domains = {
     --     {
