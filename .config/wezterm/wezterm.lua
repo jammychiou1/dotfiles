@@ -2,8 +2,8 @@ local wezterm = require 'wezterm'
 local act = wezterm.action
 
 return {
-    font = wezterm.font 'UbuntuMono Nerd Font Mono',
-    font_size = 12.0,
+    font = wezterm.font 'Hack Nerd Font Mono',
+    font_size = 9.0,
     enable_csi_u_key_encoding = true,
     -- hide_tab_bar_if_only_one_tab = true,
     window_padding = {
